@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Projects - Connect Shiksha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 45%, #1e293b 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 20s ease infinite;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #fde68a, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.25); }
+    </style>
+    <meta name="description" content="Top 10 Projects by Connect Shiksha Coding Class Balaghat - Launchpad linking to all projects and GitHub repository.">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header / Hero -->
+    <header class="hero-gradient text-white relative overflow-hidden">
+        <div class="pointer-events-none absolute inset-0 opacity-15" style="background: radial-gradient(600px 220px at 10% 5%, rgba(255,255,255,.35), transparent 60%), radial-gradient(420px 200px at 90% 10%, rgba(255,255,255,.25), transparent 60%), radial-gradient(560px 320px at 50% 100%, rgba(255,255,255,.2), transparent 70%);"></div>
+        <div class="container mx-auto px-4 py-10 md:py-16 relative">
+            <div class="flex items-center justify-center mb-8 text-center">
+                <a href="https://connectshiksha.com" target="_blank" rel="noopener" class="inline-flex items-center space-x-3 group">
+                    <img src="https://connectshiksha.com/assets/mainlogo-BVXvkrYL.png" alt="Connect Shiksha" class="h-10 w-auto rounded-md shadow-sm bg-white/80 p-1" />
+                    <div class="text-left">
+                        <h1 class="text-2xl md:text-3xl font-bold">Connect Shiksha</h1>
+                        <p class="text-sm md:text-base opacity-90">Coding Class Balaghat</p>
+                    </div>
+                    <i class="fas fa-external-link-alt opacity-80 text-sm group-hover:translate-x-0.5 transition"></i>
+                </a>
+            </div>
+
+            <div class="max-w-3xl mx-auto text-center">
+                <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/15 ring-1 ring-white/30 text-sm mb-4 backdrop-blur">
+                    <i class="fas fa-bolt mr-2"></i> Top 10 curated projects • Tailwind + JS • Responsive
+                </span>
+                <h2 class="text-4xl md:text-6xl font-black leading-tight mb-4">
+                    Build, Learn, Launch
+                    <span class="gradient-text">Modern Web Projects</span>
+                </h2>
+                <p class="text-base md:text-xl opacity-95 mb-6 md:mb-8">A collection of polished, mobile-first websites using HTML, Tailwind CSS, and JavaScript. Quickly open any project or browse the source code.</p>
+                <div class="flex gap-3 flex-wrap justify-center">
+                    <a href="#projects" class="bg-yellow-300 text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-200 transition w-full sm:w-auto text-center"><i class="fas fa-eye mr-2"></i>Browse Projects</a>
+                    <a href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha.git" target="_blank" class="border-2 border-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-gray-900 transition w-full sm:w-auto text-center"><i class="fab fa-github mr-2"></i>GitHub Repo</a>
+                    <a href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha.git" target="_blank" class="md:hidden inline-flex items-center px-4 py-3 rounded-full bg-white/15 ring-1 ring-white/30 font-semibold hover:bg-white/20 transition w-full sm:w-auto justify-center"><i class="fab fa-github mr-2"></i>Star on GitHub</a>
+                </div>
+
+                <div class="mt-6 md:mt-8 flex flex-wrap gap-2 justify-center">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 ring-1 ring-white/20 text-sm"><i class="fas fa-mobile-alt"></i> Mobile-first</span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 ring-1 ring-white/20 text-sm"><i class="fas fa-gauge-high"></i> Fast UI</span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 ring-1 ring-white/20 text-sm"><i class="fas fa-layer-group"></i> 10 Templates</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Grid -->
+    <main id="projects" class="container mx-auto px-4 py-12 md:py-16">
+        <div class="text-center mb-10 md:mb-14">
+            <div class="text-green-600 font-semibold mb-2">LAUNCHPAD</div>
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-800">Open a Project</h3>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-3">Each card includes a brief description, a View button to open the live page locally, and a Code button to view the source on GitHub.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Medical Store -->
+            <div class="bg-white rounded-2xl p-6 shadow card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">Medical Store / Pharmacy</h4>
+                    <span class="text-blue-600"><i class="fas fa-pills"></i></span>
+                </div>
+                <p class="text-gray-600 mb-6">Hero with medicine search, services, product categories, map and contact.</p>
+                <div class="flex gap-3">
+                    <a class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition" href="Medical Store/index.html"><i class="fas fa-eye mr-2"></i>View</a>
+                    <a class="border border-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition" target="_blank" href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha/tree/master/Medical%20Store"><i class="fab fa-github mr-2"></i>Code</a>
+                </div>
+            </div>
+
+            <!-- Coffee Store -->
+            <div class="bg-white rounded-2xl p-6 shadow card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">Coffee Shop</h4>
+                    <span class="text-amber-600"><i class="fas fa-mug-hot"></i></span>
+                </div>
+                <p class="text-gray-600 mb-6">Coffee hero, menu/products, story, gallery, location & hours.</p>
+                <div class="flex gap-3">
+                    <a class="bg-amber-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-amber-700 transition" href="Coffee Store/index.html"><i class="fas fa-eye mr-2"></i>View</a>
+                    <a class="border border-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition" target="_blank" href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha/tree/master/Coffee%20Store"><i class="fab fa-github mr-2"></i>Code</a>
+                </div>
+            </div>
+
+            <!-- Gym Website -->
+            <div class="bg-white rounded-2xl p-6 shadow card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">Gym / Fitness Center</h4>
+                    <span class="text-red-600"><i class="fas fa-dumbbell"></i></span>
+                </div>
+                <p class="text-gray-600 mb-6">Membership CTA, services/classes, trainers, pricing plans & contact.</p>
+                <div class="flex gap-3">
+                    <a class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition" href="Gym Website/index.html"><i class="fas fa-eye mr-2"></i>View</a>
+                    <a class="border border-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition" target="_blank" href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha/tree/master/Gym%20Website"><i class="fab fa-github mr-2"></i>Code</a>
+                </div>
+            </div>
+
+            <!-- Kirana Store -->
+            <div class="bg-white rounded-2xl p-6 shadow card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">Kirana Store / Grocery</h4>
+                    <span class="text-green-600"><i class="fas fa-shopping-basket"></i></span>
+                </div>
+                <p class="text-gray-600 mb-6">Delivery promise, product categories, gallery, delivery areas & order form.</p>
+                <div class="flex gap-3">
+                    <a class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition" href="Kirana Store/index.html"><i class="fas fa-eye mr-2"></i>View</a>
+                    <a class="border border-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition" target="_blank" href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha/tree/master/Kirana%20Store"><i class="fab fa-github mr-2"></i>Code</a>
+                </div>
+            </div>
+
+            <!-- School Website -->
+            <div class="bg-white rounded-2xl p-6 shadow card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">School Website</h4>
+                    <span class="text-blue-600"><i class="fas fa-school"></i></span>
+                </div>
+                <p class="text-gray-600 mb-6">Admissions hero, about, programs, faculty, campus gallery, location & contact.</p>
+                <div class="flex gap-3">
+                    <a class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition" href="School Website/index.html"><i class="fas fa-eye mr-2"></i>View</a>
+                    <a class="border border-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition" target="_blank" href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha/tree/master/School%20Website"><i class="fab fa-github mr-2"></i>Code</a>
+                </div>
+            </div>
+
+            <!-- College Website -->
+            <div class="bg-white rounded-2xl p-6 shadow card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">College Website</h4>
+                    <span class="text-sky-600"><i class="fas fa-university"></i></span>
+                </div>
+                <p class="text-gray-600 mb-6">Courses highlight, about college, departments, campus life, gallery & admissions.</p>
+                <div class="flex gap-3">
+                    <a class="bg-sky-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-sky-700 transition" href="College Website/index.html"><i class="fas fa-eye mr-2"></i>View</a>
+                    <a class="border border-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition" target="_blank" href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha/tree/master/College%20Website"><i class="fab fa-github mr-2"></i>Code</a>
+                </div>
+            </div>
+
+            <!-- Restaurant Website -->
+            <div class="bg-white rounded-2xl p-6 shadow card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">Restaurant Website</h4>
+                    <span class="text-red-600"><i class="fas fa-utensils"></i></span>
+                </div>
+                <p class="text-gray-600 mb-6">Signature dishes hero, menu, chef story, gallery, reservations & contact.</p>
+                <div class="flex gap-3">
+                    <a class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition" href="Restaurant Website/index.html"><i class="fas fa-eye mr-2"></i>View</a>
+                    <a class="border border-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition" target="_blank" href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha/tree/master/Restaurant%20Website"><i class="fab fa-github mr-2"></i>Code</a>
+                </div>
+            </div>
+
+            <!-- Real Estate Agency -->
+            <div class="bg-white rounded-2xl p-6 shadow card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">Real Estate Agency</h4>
+                    <span class="text-emerald-600"><i class="fas fa-house"></i></span>
+                </div>
+                <p class="text-gray-600 mb-6">Property search hero, featured properties, services, testimonials, offices & contact.</p>
+                <div class="flex gap-3">
+                    <a class="bg-emerald-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-emerald-700 transition" href="Real Estate Agency/index.html"><i class="fas fa-eye mr-2"></i>View</a>
+                    <a class="border border-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition" target="_blank" href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha/tree/master/Real%20Estate%20Agency"><i class="fab fa-github mr-2"></i>Code</a>
+                </div>
+            </div>
+
+            <!-- Travel Agency -->
+            <div class="bg-white rounded-2xl p-6 shadow card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">Travel Agency</h4>
+                    <span class="text-cyan-600"><i class="fas fa-plane-departure"></i></span>
+                </div>
+                <p class="text-gray-600 mb-6">Destination search hero, tour packages, gallery, popular destinations & office.</p>
+                <div class="flex gap-3">
+                    <a class="bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-cyan-700 transition" href="Travel Agency/index.html"><i class="fas fa-eye mr-2"></i>View</a>
+                    <a class="border border-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition" target="_blank" href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha/tree/master/Travel%20Agency"><i class="fab fa-github mr-2"></i>Code</a>
+                </div>
+            </div>
+
+            <!-- Beauty Salon / Spa -->
+            <div class="bg-white rounded-2xl p-6 shadow card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">Beauty Salon / Spa</h4>
+                    <span class="text-pink-600"><i class="fas fa-spa"></i></span>
+                </div>
+                <p class="text-gray-600 mb-6">Booking CTA hero, services, about, treatment gallery, pricing, location & booking.</p>
+                <div class="flex gap-3">
+                    <a class="bg-pink-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-pink-700 transition" href="Beauty Salon Spa/index.html"><i class="fas fa-eye mr-2"></i>View</a>
+                    <a class="border border-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition" target="_blank" href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha/tree/master/Beauty%20Salon%20Spa"><i class="fab fa-github mr-2"></i>Code</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-10">
+            <div class="grid md:grid-cols-3 gap-8 items-start">
+                <div class="flex items-center space-x-3">
+                    <a href="https://connectshiksha.com" target="_blank" rel="noopener" class="flex items-center space-x-3">
+                        <img src="https://connectshiksha.com/assets/mainlogo-BVXvkrYL.png" alt="Connect Shiksha" class="h-10 w-auto rounded bg-white p-1" />
+                        <div>
+                            <h4 class="text-lg font-bold">Connect Shiksha</h4>
+                            <p class="text-gray-400 text-sm">Coding Class Balaghat</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="text-gray-300">
+                    <h5 class="font-semibold mb-2">Contact</h5>
+                    <p class="text-gray-400">9131782103 , 7748893097</p>
+                    <p class="text-gray-400">connectshikshaofficial@gmail.com</p>
+                    <p class="text-gray-400">In Front of Sindhu Bhavan, Gondia Road, Balaghat (M.P)</p>
+                </div>
+                <div class="md:text-right text-gray-300">
+                    <h5 class="font-semibold mb-2">Repository</h5>
+                    <a href="https://github.com/kuldeepkaware123/Projects-By-ConnectShiksha.git" target="_blank" class="inline-flex items-center bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition"><i class="fab fa-github mr-2"></i>GitHub Repository</a>
+                    <p class="text-gray-500 text-sm mt-3">&copy; 2025 Connect Shiksha. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll to projects
+        document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+            const href=a.getAttribute('href');
+            if(href==="#projects"){ e.preventDefault(); document.querySelector(href)?.scrollIntoView({behavior:'smooth'}); }
+        }));
+    </script>
+</body>
+</html>
+
+
