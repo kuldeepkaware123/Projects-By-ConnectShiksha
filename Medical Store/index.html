@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Plus - Your Trusted Medical Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-pills text-2xl text-blue-600"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">MediCare Plus</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                    <a href="#products" class="text-gray-600 hover:text-blue-600 transition">Products</a>
+                    <a href="#gallery" class="text-gray-600 hover:text-blue-600 transition">Gallery</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                </nav>
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-20">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <h2 class="text-4xl lg:text-6xl font-bold mb-4">Your Health, Our Priority</h2>
+                    <p class="text-xl mb-6 opacity-90">24/7 pharmacy services with home delivery. Quality medicines at affordable prices.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                            <i class="fas fa-search mr-2"></i>Find Medicines
+                        </button>
+                        <button class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                            Emergency Order
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-6">
+                        <h3 class="text-2xl font-bold mb-4">Quick Medicine Search</h3>
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Search medicines..." class="w-full p-3 rounded-lg text-gray-800">
+                            <select class="w-full p-3 rounded-lg text-gray-800">
+                                <option>Select Category</option>
+                                <option>Pain Relief</option>
+                                <option>Cold & Flu</option>
+                                <option>Vitamins</option>
+                                <option>Antibiotics</option>
+                            </select>
+                            <button class="w-full bg-blue-600 text-white p-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                                Search Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About MediCare Plus</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Serving the community for over 25 years with trusted pharmaceutical services and healthcare solutions.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Licensed & Certified</h3>
+                    <p class="text-gray-600">Fully licensed pharmacy with certified pharmacists ensuring quality and safety.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Home Delivery</h3>
+                    <p class="text-gray-600">Fast and reliable delivery service within 2 hours across the city.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Service</h3>
+                    <p class="text-gray-600">Round-the-clock availability for emergency medicine requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Products</h2>
+                <p class="text-xl text-gray-600">Wide range of medicines and healthcare products</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-pills text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Prescription Medicines</h3>
+                    <p class="text-gray-600 text-sm">Authentic prescription drugs from top pharmaceutical companies</p>
+                    <button class="mt-4 text-blue-600 font-semibold hover:underline">View More</button>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Ayurvedic Products</h3>
+                    <p class="text-gray-600 text-sm">Natural and herbal medicines for holistic health</p>
+                    <button class="mt-4 text-green-600 font-semibold hover:underline">View More</button>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover text-center">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-baby text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Baby Care</h3>
+                    <p class="text-gray-600 text-sm">Complete range of baby care products and medicines</p>
+                    <button class="mt-4 text-yellow-600 font-semibold hover:underline">View More</button>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heartbeat text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Health Supplements</h3>
+                    <p class="text-gray-600 text-sm">Vitamins, proteins and nutritional supplements</p>
+                    <button class="mt-4 text-purple-600 font-semibold hover:underline">View More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Store Gallery</h2>
+                <p class="text-xl text-gray-600">Take a look at our modern pharmacy facilities</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-200 h-64 rounded-xl flex items-center justify-center card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-image text-4xl text-gray-400 mb-2"></i>
+                        <p class="text-gray-500">Store Interior</p>
+                    </div>
+                </div>
+                <div class="bg-gray-200 h-64 rounded-xl flex items-center justify-center card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-image text-4xl text-gray-400 mb-2"></i>
+                        <p class="text-gray-500">Medicine Shelves</p>
+                    </div>
+                </div>
+                <div class="bg-gray-200 h-64 rounded-xl flex items-center justify-center card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-image text-4xl text-gray-400 mb-2"></i>
+                        <p class="text-gray-500">Consultation Area</p>
+                    </div>
+                </div>
+                <div class="bg-gray-200 h-64 rounded-xl flex items-center justify-center card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-image text-4xl text-gray-400 mb-2"></i>
+                        <p class="text-gray-500">Pharmacy Counter</p>
+                    </div>
+                </div>
+                <div class="bg-gray-200 h-64 rounded-xl flex items-center justify-center card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-image text-4xl text-gray-400 mb-2"></i>
+                        <p class="text-gray-500">Staff Team</p>
+                    </div>
+                </div>
+                <div class="bg-gray-200 h-64 rounded-xl flex items-center justify-center card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-image text-4xl text-gray-400 mb-2"></i>
+                        <p class="text-gray-500">Delivery Service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600">Comprehensive healthcare solutions for your family</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-prescription-bottle-alt text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Prescription Filling</h3>
+                    <p class="text-gray-600">Quick and accurate prescription filling by certified pharmacists</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-md text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Health Consultation</h3>
+                    <p class="text-gray-600">Free health consultation and medicine guidance</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-red-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-thermometer text-3xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Health Checkup</h3>
+                    <p class="text-gray-600">Basic health monitoring services like BP, sugar testing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Find Us</h2>
+                <p class="text-xl text-gray-600">Visit our store or get medicines delivered to your doorstep</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6">Store Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            <span>123 Health Street, Medical District, Bhopal, MP 462001</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-green-600"></i>
+                            <span>+91 9876543210</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-red-600"></i>
+                            <span>info@medicareplus.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-purple-600"></i>
+                            <span>24/7 Open (Emergency Services)</span>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="font-bold mb-3">Regular Hours:</h4>
+                        <p class="text-gray-600">Monday - Saturday: 8:00 AM - 10:00 PM</p>
+                        <p class="text-gray-600">Sunday: 9:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+                <div class="bg-gray-200 rounded-xl overflow-hidden">
+                    <div class="h-full min-h-96 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-map text-6xl text-gray-400 mb-4"></i>
+                            <p class="text-gray-500 text-lg">Google Maps Integration</p>
+                            <p class="text-gray-400">Interactive map would be embedded here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <p class="text-xl text-gray-600">Get in touch for any queries or emergency medicine requirements</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6">Send us a Message</h3>
+                    <form class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            <input type="email" placeholder="Your Email" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            <option>Select Inquiry Type</option>
+                            <option>Medicine Availability</option>
+                            <option>Home Delivery</option>
+                            <option>Health Consultation</option>
+                            <option>Emergency Order</option>
+                            <option>General Query</option>
+                        </select>
+                        <textarea placeholder="Your Message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                        <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-lg mb-3 text-blue-800">Emergency Orders</h4>
+                        <p class="text-blue-700 mb-3">Need medicines urgently? Call our emergency hotline:</p>
+                        <p class="text-2xl font-bold text-blue-800">+91 9876543211</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-lg mb-3 text-green-800">WhatsApp Orders</h4>
+                        <p class="text-green-700 mb-3">Send your prescription via WhatsApp:</p>
+                        <button class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+                            <i class="fab fa-whatsapp mr-2"></i>+91 9876543212
+                        </button>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-lg mb-3 text-purple-800">Health Tips</h4>
+                        <p class="text-purple-700">Subscribe to our newsletter for weekly health tips and medicine reminders.</p>
+                        <div class="mt-3 flex">
+                            <input type="email" placeholder="Your email" class="flex-1 p-2 border rounded-l-lg focus:outline-none">
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-r-lg hover:bg-purple-700 transition">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-pills text-2xl text-blue-400"></i>
+                        <h3 class="text-xl font-bold">MediCare Plus</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted pharmacy partner for over 25 years. Quality medicines, reliable service.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Products</a></li>
+                        <li><a href="#" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Home Delivery</a></li>
+                        <li><a href="#" class="hover:text-white transition">Online Ordering</a></li>
+                        <li><a href="#" class="hover:text-white transition">Health Consultation</a></li>
+                        <li><a href="#" class="hover:text-white transition">Emergency Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Health Checkup</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <div class="space-y-3 text-gray-400">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>123 Health Street, Bhopal</p>
+                        <p><i class="fas fa-phone mr-2"></i>+91 9876543210</p>
+                        <p><i class="fas fa-envelope mr-2"></i>info@medicareplus.com</p>
+                        <p><i class="fas fa-clock mr-2"></i>24/7 Available</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 MediCare Plus. All rights reserved. | Licensed Pharmacy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.md\\:hidden');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+        });
+    </script>
+</body>
+</html>

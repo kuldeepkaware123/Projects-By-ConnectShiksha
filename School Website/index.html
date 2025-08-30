@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Future Academy - Excellence in Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .book-float {
+            animation: book-float 3s ease-in-out infinite;
+        }
+        @keyframes book-float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        .star-twinkle {
+            animation: twinkle 2s ease-in-out infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="hero-gradient w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">Bright Future Academy</h1>
+                        <p class="text-xs text-gray-600">Excellence in Education</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition font-medium">About</a>
+                    <a href="#programs" class="text-gray-700 hover:text-blue-600 transition font-medium">Programs</a>
+                    <a href="#faculty" class="text-gray-700 hover:text-blue-600 transition font-medium">Faculty</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-blue-600 transition font-medium">Gallery</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition font-medium">Contact</a>
+                </nav>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition hidden md:block">
+                    Admissions Open
+                </button>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-20 min-h-screen flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="star-twinkle text-2xl">⭐</div>
+                        <span class="text-blue-200 font-bold">ADMISSIONS OPEN 2025-26</span>
+                    </div>
+                    <h2 class="text-5xl lg:text-7xl font-bold mb-6">
+                        Shaping <span class="text-yellow-300">Bright</span> Futures
+                    </h2>
+                    <p class="text-xl mb-8 opacity-90 leading-relaxed">
+                        Where learning meets excellence. Join Bhopal's most trusted educational institution 
+                        with 25+ years of academic excellence and holistic development.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+                        <button class="bg-yellow-500 text-blue-800 px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition transform hover:scale-105">
+                            <i class="fas fa-user-plus mr-2"></i>Apply Now
+                        </button>
+                        <button class="border-2 border-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-600 transition">
+                            <i class="fas fa-video mr-2"></i>Virtual Tour
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-300">25+</div>
+                            <div class="text-blue-200 text-sm">Years Excellence</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-300">2000+</div>
+                            <div class="text-blue-200 text-sm">Students</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-300">98%</div>
+                            <div class="text-blue-200 text-sm">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8">
+                        <h3 class="text-3xl font-bold mb-6 text-center">Admission Form</h3>
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Student Name" class="w-full p-4 rounded-xl text-gray-800 border-0 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <input type="text" placeholder="Parent Name" class="w-full p-4 rounded-xl text-gray-800 border-0 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <input type="tel" placeholder="Contact Number" class="w-full p-4 rounded-xl text-gray-800 border-0 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <select class="w-full p-4 rounded-xl text-gray-800 border-0 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                <option>Select Class</option>
+                                <option>Nursery</option>
+                                <option>LKG</option>
+                                <option>UKG</option>
+                                <option>Class 1st</option>
+                                <option>Class 2nd</option>
+                                <option>Class 3rd</option>
+                                <option>Class 4th</option>
+                                <option>Class 5th</option>
+                                <option>Class 6th</option>
+                                <option>Class 7th</option>
+                                <option>Class 8th</option>
+                                <option>Class 9th</option>
+                                <option>Class 10th</option>
+                            </select>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-blue-100 p-4 rounded-xl text-center text-blue-800">
+                                    <div class="text-2xl mb-2">📚</div>
+                                    <p class="font-bold">CBSE Board</p>
+                                    <p class="text-sm">Recognized</p>
+                                </div>
+                                <div class="bg-yellow-100 p-4 rounded-xl text-center text-yellow-800">
+                                    <div class="text-2xl mb-2">🏆</div>
+                                    <p class="font-bold">Top Rated</p>
+                                    <p class="text-sm">School</p>
+                                </div>
+                            </div>
+                            <button class="w-full bg-yellow-500 text-blue-800 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition">
+                                Submit Application
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="text-blue-600 font-bold mb-2">ABOUT OUR SCHOOL</div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Nurturing Young Minds Since 1998</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We believe every child is unique and deserves the best education. Our holistic approach ensures academic excellence while developing character, creativity, and confidence.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="book-float text-6xl mb-6">📖</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Academic Excellence</h3>
+                    <p class="text-gray-600">CBSE curriculum with innovative teaching methods and state-of-the-art learning resources.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="text-6xl mb-6">🎨</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Creative Arts</h3>
+                    <p class="text-gray-600">Music, dance, art, and drama programs to nurture artistic talents and self-expression.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="text-6xl mb-6">⚽</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Sports & Fitness</h3>
+                    <p class="text-gray-600">Comprehensive sports program with professional coaches and modern sports facilities.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="text-6xl mb-6">🔬</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Science Labs</h3>
+                    <p class="text-gray-600">Well-equipped laboratories for hands-on learning in physics, chemistry, and biology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="text-blue-600 font-bold mb-2">ACADEMIC PROGRAMS</div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Comprehensive Curriculum</h2>
+                <p class="text-xl text-gray-600">From foundation to secondary education, we offer complete academic programs</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-red-400 to-red-600 text-white p-8 rounded-3xl card-hover">
+                    <div class="text-6xl mb-6">🌟</div>
+                    <h3 class="text-2xl font-bold mb-4">Pre-Primary (Nursery-UKG)</h3>
+                    <p class="mb-6 opacity-90">Foundation years focusing on play-based learning, social skills, and basic academics</p>
+                    <ul class="space-y-2 mb-6 opacity-90">
+                        <li><i class="fas fa-check mr-2"></i>Play-based learning</li>
+                        <li><i class="fas fa-check mr-2"></i>Motor skills development</li>
+                        <li><i class="fas fa-check mr-2"></i>Creative activities</li>
+                        <li><i class="fas fa-check mr-2"></i>Storytelling sessions</li>
+                    </ul>
+                    <button class="w-full bg-white text-red-600 py-3 rounded-xl font-bold hover:bg-gray-100 transition">
+                        Learn More
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-400 to-green-600 text-white p-8 rounded-3xl card-hover">
+                    <div class="text-6xl mb-6">📚</div>
+                    <h3 class="text-2xl font-bold mb-4">Primary (Classes I-V)</h3>
+                    <p class="mb-6 opacity-90">Building strong foundations in core subjects with emphasis on conceptual understanding</p>
+                    <ul class="space-y-2 mb-6 opacity-90">
+                        <li><i class="fas fa-check mr-2"></i>English & Hindi language</li>
+                        <li><i class="fas fa-check mr-2"></i>Mathematics fundamentals</li>
+                        <li><i class="fas fa-check mr-2"></i>Environmental studies</li>
+                        <li><i class="fas fa-check mr-2"></i>Computer basics</li>
+                    </ul>
+                    <button class="w-full bg-white text-green-600 py-3 rounded-xl font-bold hover:bg-gray-100 transition">
+                        Learn More
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-400 to-blue-600 text-white p-8 rounded-3xl card-hover">
+                    <div class="text-6xl mb-6">🎓</div>
+                    <h3 class="text-2xl font-bold mb-4">Secondary (Classes VI-X)</h3>
+                    <p class="mb-6 opacity-90">Advanced curriculum preparing students for board examinations and future careers</p>
+                    <ul class="space-y-2 mb-6 opacity-90">
+                        <li><i class="fas fa-check mr-2"></i>CBSE syllabus</li>
+                        <li><i class="fas fa-check mr-2"></i>Science & Mathematics</li>
+                        <li><i class="fas fa-check mr-2"></i>Social studies</li>
+                        <li><i class="fas fa-check mr-2"></i>Optional subjects</li>
+                    </ul>
+                    <button class="w-full bg-white text-blue-600 py-3 rounded-xl font-bold hover:bg-gray-100 transition">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="text-blue-600 font-bold mb-2">OUR FACULTY</div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Experienced Educators</h2>
+                <p class="text-xl text-gray-600">Dedicated teachers committed to nurturing every student's potential</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <div class="bg-gradient-to-br from-blue-400 to-blue-600 h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-user text-4xl"></i>
+                            </div>
+                            <p class="font-bold">Principal Photo</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dr. Priya Sharma</h3>
+                        <p class="text-blue-600 font-medium mb-3">Principal & Director</p>
+                        <p class="text-gray-600 mb-4">M.Ed., Ph.D. in Education with 20+ years of experience in educational leadership and curriculum development.</p>
+                        <div class="flex items-center space-x-4">
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Leadership</span>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">M.Ed.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <div class="bg-gradient-to-br from-green-400 to-green-600 h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-user text-4xl"></i>
+                            </div>
+                            <p class="font-bold">Teacher Photo</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mr. Rajesh Kumar</h3>
+                        <p class="text-green-600 font-medium mb-3">Mathematics Head</p>
+                        <p class="text-gray-600 mb-4">M.Sc. Mathematics with 15 years of teaching experience. Expert in making complex concepts simple and engaging.</p>
+                        <div class="flex items-center space-x-4">
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Mathematics</span>
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">M.Sc.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <div class="bg-gradient-to-br from-purple-400 to-purple-600 h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-user text-4xl"></i>
+                            </div>
+                            <p class="font-bold">Teacher Photo</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Ms. Anjali Verma</h3>
+                        <p class="text-purple-600 font-medium mb-3">English Literature</p>
+                        <p class="text-gray-600 mb-4">M.A. English Literature, published author with expertise in creative writing and language development.</p>
+                        <div class="flex items-center space-x-4">
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">English</span>
+                            <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm font-medium">Author</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <div class="bg-gradient-to-br from-red-400 to-red-600 h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-user text-4xl"></i>
+                            </div>
+                            <p class="font-bold">Teacher Photo</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dr. Vikram Singh</h3>
+                        <p class="text-red-600 font-medium mb-3">Science Department</p>
+                        <p class="text-gray-600 mb-4">Ph.D. in Physics with research background. Makes science fun through experiments and practical learning.</p>
+                        <div class="flex items-center space-x-4">
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">Science</span>
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Ph.D.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <div class="bg-gradient-to-br from-yellow-400 to-yellow-600 h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-user text-4xl"></i>
+                            </div>
+                            <p class="font-bold">Teacher Photo</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mrs. Sneha Gupta</h3>
+                        <p class="text-yellow-600 font-medium mb-3">Arts & Crafts</p>
+                        <p class="text-gray-600 mb-4">B.F.A. with specialization in fine arts. Encourages creativity and artistic expression in students.</p>
+                        <div class="flex items-center space-x-4">
+                            <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm font-medium">Arts</span>
+                            <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm font-medium">B.F.A.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <div class="bg-gradient-to-br from-indigo-400 to-indigo-600 h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-user text-4xl"></i>
+                            </div>
+                            <p class="font-bold">Teacher Photo</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mr. Amit Patel</h3>
+                        <p class="text-indigo-600 font-medium mb-3">Physical Education</p>
+                        <p class="text-gray-600 mb-4">M.P.Ed. with national level sports achievements. Focuses on physical fitness and sportsmanship.</p>
+                        <div class="flex items-center space-x-4">
+                            <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium">Sports</span>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">M.P.Ed.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="text-blue-600 font-bold mb-2">CAMPUS GALLERY</div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Our Beautiful Campus</h2>
+                <p class="text-xl text-gray-600">State-of-the-art facilities designed for optimal learning</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-blue-300 to-blue-500 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-white">
+                        <i class="fas fa-school text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">School Building</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-green-300 to-green-500 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-white">
+                        <i class="fas fa-chalkboard-teacher text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Smart Classrooms</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-red-300 to-red-500 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-white">
+                        <i class="fas fa-book-open text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Library</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-300 to-purple-500 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-white">
+                        <i class="fas fa-flask text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Science Labs</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-white">
+                        <i class="fas fa-running text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Sports Ground</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-pink-300 to-pink-500 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-white">
+                        <i class="fas fa-theater-masks text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Auditorium</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-300 to-indigo-500 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-white">
+                        <i class="fas fa-desktop text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Computer Lab</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-orange-300 to-orange-500 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-white">
+                        <i class="fas fa-utensils text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Cafeteria</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-teal-300 to-teal-500 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-white">
+                        <i class="fas fa-bus text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Transport</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Visit Our Campus</h2>
+                <p class="text-xl text-gray-600">Located in the heart of Bhopal with easy accessibility</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">School Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Address</h4>
+                                    <p class="text-gray-600">123 Education Street, MP Nagar, Bhopal, MP 462011</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Phone</h4>
+                                    <p class="text-gray-600">+91 9876543210</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-purple-100 w-14 h-14 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Email</h4>
+                                    <p class="text-gray-600">info@brightfutureacademy.edu</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-yellow-100 w-14 h-14 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">School Hours</h4>
+                                    <p class="text-gray-600">Mon-Fri: 8:00 AM - 3:00 PM</p>
+                                    <p class="text-gray-600">Sat: 8:00 AM - 1:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-xl">
+                        <h3 class="text-xl font-bold mb-6">Facilities</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-bus text-blue-600"></i>
+                                <span class="text-gray-700">School Bus</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-wifi text-green-600"></i>
+                                <span class="text-gray-700">Free WiFi</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-shield-alt text-red-600"></i>
+                                <span class="text-gray-700">CCTV Security</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-stethoscope text-purple-600"></i>
+                                <span class="text-gray-700">Medical Room</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-parking text-yellow-600"></i>
+                                <span class="text-gray-700">Parking</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-utensils text-pink-600"></i>
+                                <span class="text-gray-700">Cafeteria</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-200 rounded-3xl overflow-hidden">
+                    <div class="h-full min-h-96 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-map-marked-alt text-8xl text-blue-600 mb-6"></i>
+                            <p class="text-blue-800 text-2xl font-bold mb-4">Interactive Campus Map</p>
+                            <p class="text-blue-700 mb-6">Virtual tour and directions</p>
+                            <button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition">
+                                <i class="fas fa-directions mr-2"></i>Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Admissions & Contact</h2>
+                <p class="text-xl text-gray-600">Ready to join our school family? Get in touch with us today</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-3xl shadow-xl">
+                    <h3 class="text-2xl font-bold mb-6">Admission Inquiry</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Student Name" class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 transition">
+                            <input type="text" placeholder="Parent Name" class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="email" placeholder="Email Address" class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 transition">
+                            <input type="tel" placeholder="Contact Number" class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <select class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 transition">
+                                <option>Select Class</option>
+                                <option>Nursery</option>
+                                <option>LKG</option>
+                                <option>UKG</option>
+                                <option>Class 1st</option>
+                                <option>Class 2nd</option>
+                                <option>Class 3rd</option>
+                                <option>Class 4th</option>
+                                <option>Class 5th</option>
+                                <option>Class 6th</option>
+                                <option>Class 7th</option>
+                                <option>Class 8th</option>
+                                <option>Class 9th</option>
+                                <option>Class 10th</option>
+                            </select>
+                            <select class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 transition">
+                                <option>Academic Year</option>
+                                <option>2025-26</option>
+                                <option>2026-27</option>
+                            </select>
+                        </div>
+                        <textarea placeholder="Any specific requirements or questions?" rows="4" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 transition"></textarea>
+                        <button type="submit" class="w-full hero-gradient text-white p-4 rounded-xl font-bold text-lg hover:scale-105 transition transform">
+                            <i class="fas fa-user-plus mr-2"></i>Submit Application
+                        </button>
+                    </form>
+                </div>
+                <div class="space-y-6">
+                    <div class="hero-gradient p-8 rounded-3xl text-white">
+                        <h4 class="text-2xl font-bold mb-4">🎓 Admission Process</h4>
+                        <div class="space-y-4 opacity-90">
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-white text-blue-600 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">1</div>
+                                <div>
+                                    <h5 class="font-bold">Application Form</h5>
+                                    <p class="text-sm">Fill the admission form online or visit the school</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-white text-blue-600 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">2</div>
+                                <div>
+                                    <h5 class="font-bold">Document Verification</h5>
+                                    <p class="text-sm">Submit required documents and certificates</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-white text-blue-600 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">3</div>
+                                <div>
+                                    <h5 class="font-bold">Interaction Session</h5>
+                                    <p class="text-sm">Student and parent meeting with faculty</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-white text-blue-600 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">4</div>
+                                <div>
+                                    <h5 class="font-bold">Admission Confirmation</h5>
+                                    <p class="text-sm">Fee payment and admission confirmation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-100 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl mb-3 text-green-800">School Transport</h4>
+                        <p class="text-green-700 mb-4">Safe and reliable bus service covering major areas of Bhopal</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-800">₹2,500/month</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700 transition">
+                                Route Details
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-100 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl mb-3 text-yellow-800">Scholarship Program</h4>
+                        <p class="text-yellow-700 mb-4">Merit-based scholarships available for deserving students</p>
+                        <button class="bg-yellow-600 text-white px-6 py-3 rounded-xl hover:bg-yellow-700 transition">
+                            <i class="fas fa-award mr-2"></i>Learn More
+                        </button>
+                    </div>
+                    
+                    <div class="bg-purple-100 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl mb-3 text-purple-800">Campus Visit</h4>
+                        <p class="text-purple-700 mb-4">Schedule a campus tour to experience our facilities firsthand</p>
+                        <button class="bg-purple-600 text-white px-6 py-3 rounded-xl hover:bg-purple-700 transition">
+                            <i class="fas fa-calendar mr-2"></i>Book Tour
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="hero-gradient w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Bright Future Academy</h3>
+                            <p class="text-gray-400 text-sm">Excellence in Education</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Nurturing young minds for over 25 years. We are committed to providing quality education and shaping tomorrow's leaders.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="#programs" class="hover:text-blue-400 transition">Programs</a></li>
+                        <li><a href="#faculty" class="hover:text-blue-400 transition">Faculty</a></li>
+                        <li><a href="#gallery" class="hover:text-blue-400 transition">Gallery</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Admissions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Academic Programs</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-blue-400 transition">Pre-Primary (Nursery-UKG)</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Primary (Classes I-V)</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Secondary (Classes VI-X)</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Extracurricular Activities</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Sports Program</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Arts & Crafts</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+                    <div class="space-y-4 text-gray-400">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-blue-400"></i>
+                            <span>123 Education Street, MP Nagar, Bhopal</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-blue-400"></i>
+                            <span>+91 9876543210</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-blue-400"></i>
+                            <span>info@brightfutureacademy.edu</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-blue-400"></i>
+                            <span>Mon-Fri: 8 AM - 3 PM</span>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h5 class="font-bold mb-3">School Updates</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="flex-1 p-2 rounded-l-lg text-gray-800 focus:outline-none">
+                            <button class="hero-gradient px-4 py-2 rounded-r-lg hover:opacity-90 transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400">&copy; 2025 Bright Future Academy. All rights reserved. | CBSE Affiliated School</p>
+                    <div class="flex space-x-6 text-gray-400">
+                        <a href="#" class="hover:text-blue-400 transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-blue-400 transition">Terms & Conditions</a>
+                        <a href="#" class="hover:text-blue-400 transition">Admission Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Admission Button -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <button class="hero-gradient w-16 h-16 rounded-full shadow-2xl hover:scale-110 transition transform flex items-center justify-center text-white">
+            <i class="fas fa-user-plus text-xl"></i>
+        </button>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.md\\:hidden');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-full');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('shadow-lg');
+            nav.classList.toggle('p-4');
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const studentName = e.target.querySelector('input[placeholder="Student Name"]').value;
+            const selectedClass = e.target.querySelector('select').value;
+            
+            if (studentName && selectedClass !== 'Select Class' && selectedClass !== 'Academic Year') {
+                alert(`Thank you! Admission application for ${studentName} (${selectedClass}) has been submitted successfully. Our admissions team will contact you within 24 hours.`);
+            } else {
+                alert('Please fill in all required fields including student name and class selection.');
+            }
+        });
+
+        // Newsletter subscription
+        document.querySelector('input[placeholder="Your email"]').parentNode.querySelector('button').addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = document.querySelector('input[placeholder="Your email"]').value;
+            if (email) {
+                alert('Thank you for subscribing! You\'ll receive regular updates about school activities and announcements.');
+                document.querySelector('input[placeholder="Your email"]').value = '';
+            }
+        });
+
+        // Program and facility buttons
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.textContent === 'Learn More') {
+                btn.addEventListener('click', () => {
+                    const program = btn.closest('.card-hover').querySelector('h3').textContent;
+                    alert(`More information about ${program}:\n\n• Detailed curriculum structure\n• Learning outcomes\n• Assessment methods\n• Extracurricular integration\n\nPlease contact our academic office for complete program details.`);
+                });
+            }
+            
+            if (btn.textContent.includes('Apply Now') || btn.textContent.includes('Submit Application')) {
+                btn.addEventListener('click', () => {
+                    alert('Redirecting to admission portal...\n\nComplete application form with:\n• Student details\n• Academic records\n• Document upload\n• Fee payment');
+                });
+            }
+            
+            if (btn.textContent.includes('Virtual Tour')) {
+                btn.addEventListener('click', () => {
+                    alert('Starting virtual campus tour...\n\n• 360° classroom views\n• Laboratory walkthroughs\n• Sports facilities\n• Library and computer labs\n• Interactive facility map');
+                });
+            }
+            
+            if (btn.textContent.includes('Route Details')) {
+                btn.addEventListener('click', () => {
+                    alert('School Bus Routes:\n\n• Route 1: MP Nagar - TT Nagar - Shahpura\n• Route 2: Arera Colony - New Market - Bittan Market\n• Route 3: Kolar Road - Berasia Road - BHEL\n\nPickup times: 7:30 AM - 8:30 AM\nDrop times: 3:30 PM - 4:30 PM');
+                });
+            }
+            
+            if (btn.textContent.includes('Book Tour')) {
+                btn.addEventListener('click', () => {
+                    alert('Campus tour booking:\n\n• Available slots: Mon-Fri 10 AM - 4 PM\n• Duration: 45 minutes\n• Includes: Classroom visit, lab tour, sports facilities\n• Please call +91 9876543210 to schedule');
+                });
+            }
+        });
+
+        // Floating admission button
+        document.querySelector('.fixed button').addEventListener('click', () => {
+            alert('Quick Admission Inquiry:\n\n📞 Call: +91 9876543210\n📧 Email: admissions@brightfutureacademy.edu\n🏫 Visit: 123 Education Street, MP Nagar\n\n✨ Admissions open for 2025-26 academic year!');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-opacity-95');
+                header.classList.add('backdrop-blur');
+            } else {
+                header.classList.remove('bg-opacity-95');
+                header.classList.remove('backdrop-blur');
+            }
+        });
+
+        // Interactive animations
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('i');
+                if (icon) {
+                    icon.style.transform = 'scale(1.1) rotate(5deg)';
+                    icon.style.transition = 'transform 0.3s ease';
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('i');
+                if (icon) {
+                    icon.style.transform = 'scale(1) rotate(0deg)';
+                }
+            });
+        });
+
+        // Add educational motivation message
+        setTimeout(() => {
+            const showEducationTip = Math.random() > 0.8; // 20% chance
+            if (showEducationTip) {
+                alert('🎓 "Education is the most powerful weapon which you can use to change the world." - Nelson Mandela\n\nJoin Bright Future Academy and be part of an educational journey that shapes tomorrow\'s leaders!');
+            }
+        }, 8000);
+    </script>
+</body>
+</html>

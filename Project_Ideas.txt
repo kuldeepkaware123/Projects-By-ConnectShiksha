@@ -1,0 +1,70 @@
+10 Project Ideas:
+
+Medical Store/Pharmacy Website
+
+Hero section with medicine search
+About us, Services, Product categories
+Location with Google Maps, Contact form
+
+
+Coffee Shop Website
+
+Hero with coffee imagery
+Menu/Products, About story, Gallery
+Location finder, Contact & hours
+
+
+Gym/Fitness Center
+
+Hero with membership CTA
+Services/Classes, Trainers, Equipment gallery
+Pricing plans, Location, Contact
+
+
+Kirana Store/Grocery
+
+Hero with delivery promise
+Product categories, About us, Gallery
+Delivery areas map, Contact & ordering
+
+
+School Website
+
+Hero with admission info
+About school, Programs/Courses, Faculty
+Campus gallery, Location, Contact/Admissions
+
+
+College Website
+
+Hero with courses highlight
+About college, Departments, Campus life
+Student gallery, Location, Admissions contact
+
+
+Restaurant Website
+
+Hero with signature dishes
+Menu, About chef/restaurant, Food gallery
+Reservations, Location map, Contact
+
+
+Real Estate Agency
+
+Hero with property search
+About company, Featured properties, Services
+Testimonials, Office locations, Contact
+
+
+Travel Agency
+
+Hero with destination search
+About us, Tour packages, Travel gallery
+Popular destinations, Office location, Contact
+
+
+Beauty Salon/Spa
+
+Hero with booking CTA
+Services, About salon, Treatment gallery
+Pricing, Location, Book appointment

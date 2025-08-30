@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart Kirana - Fresh Groceries Delivered Daily</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #22c55e 0%, #15803d 50%, #065f46 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .delivery-truck {
+            animation: truck-move 3s ease-in-out infinite;
+        }
+        @keyframes truck-move {
+            0%, 100% { transform: translateX(0px); }
+            50% { transform: translateX(20px); }
+        }
+        .fresh-bounce {
+            animation: fresh 2s ease-in-out infinite;
+        }
+        @keyframes fresh {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="hero-gradient w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-shopping-basket text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">FreshMart Kirana</h1>
+                        <p class="text-xs text-gray-600">Fresh Groceries Daily</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-green-600 transition font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-600 transition font-medium">About</a>
+                    <a href="#products" class="text-gray-700 hover:text-green-600 transition font-medium">Products</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-green-600 transition font-medium">Gallery</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-600 transition font-medium">Contact</a>
+                </nav>
+                <button class="bg-green-600 text-white px-6 py-2 rounded-full font-bold hover:bg-green-700 transition hidden md:block">
+                    Order Now
+                </button>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-20 min-h-screen flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="delivery-truck text-2xl">🚛</div>
+                        <span class="text-green-200 font-bold">FREE DELIVERY IN 30 MINUTES</span>
+                    </div>
+                    <h2 class="text-5xl lg:text-7xl font-bold mb-6">
+                        Fresh Groceries <span class="text-yellow-300">Delivered</span> Daily
+                    </h2>
+                    <p class="text-xl mb-8 opacity-90 leading-relaxed">
+                        Quality groceries, fresh vegetables, and daily essentials delivered to your doorstep. 
+                        Experience the convenience of online grocery shopping with traditional kirana store care.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+                        <button class="bg-yellow-500 text-green-800 px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition transform hover:scale-105">
+                            <i class="fas fa-shopping-cart mr-2"></i>Shop Now
+                        </button>
+                        <button class="border-2 border-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-green-600 transition">
+                            <i class="fas fa-phone mr-2"></i>Call to Order
+                        </button>
+                    </div>
+                    <div class="flex items-center space-x-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-300">30min</div>
+                            <div class="text-green-200 text-sm">Delivery Time</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-300">500+</div>
+                            <div class="text-green-200 text-sm">Products</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-300">24/7</div>
+                            <div class="text-green-200 text-sm">Service</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8">
+                        <h3 class="text-3xl font-bold mb-6 text-center">Quick Order</h3>
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Search products..." class="w-full p-4 rounded-xl text-gray-800 border-0 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <select class="w-full p-4 rounded-xl text-gray-800 border-0 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                <option>Select Category</option>
+                                <option>Vegetables & Fruits</option>
+                                <option>Dairy Products</option>
+                                <option>Grains & Pulses</option>
+                                <option>Snacks & Beverages</option>
+                                <option>Personal Care</option>
+                            </select>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-green-100 p-4 rounded-xl text-center text-green-800">
+                                    <div class="text-2xl mb-2">🥕</div>
+                                    <p class="font-bold">Fresh Vegetables</p>
+                                    <p class="text-sm">Starting ₹20/kg</p>
+                                </div>
+                                <div class="bg-yellow-100 p-4 rounded-xl text-center text-yellow-800">
+                                    <div class="text-2xl mb-2">🥛</div>
+                                    <p class="font-bold">Dairy Fresh</p>
+                                    <p class="text-sm">Starting ₹25/L</p>
+                                </div>
+                            </div>
+                            <button class="w-full bg-yellow-500 text-green-800 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition">
+                                Start Shopping
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="text-green-600 font-bold mb-2">ABOUT FRESHMART</div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Your Neighborhood Kirana Store, Now Online</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    For over 15 years, we've been serving fresh groceries to families in Bhopal. Now bringing the same quality and care to your digital doorstep.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="fresh-bounce text-6xl mb-6">🌱</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Farm Fresh Quality</h3>
+                    <p class="text-gray-600">Direct sourcing from local farmers ensures the freshest vegetables and fruits reach your table daily.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="text-6xl mb-6">🚚</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Fast Delivery</h3>
+                    <p class="text-gray-600">Lightning-fast delivery within 30 minutes across all major areas in Bhopal with temperature-controlled vehicles.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="text-6xl mb-6">💰</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Best Prices</h3>
+                    <p class="text-gray-600">Competitive pricing with regular discounts and bulk purchase offers. Same kirana store prices, guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="text-green-600 font-bold mb-2">OUR PRODUCTS</div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Fresh Categories</h2>
+                <p class="text-xl text-gray-600">Everything you need for your daily grocery requirements</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-green-400 to-green-600 text-white p-6 rounded-2xl card-hover">
+                    <div class="text-5xl mb-4">🥬</div>
+                    <h3 class="text-xl font-bold mb-2">Vegetables & Fruits</h3>
+                    <p class="opacity-90 mb-4">Fresh daily arrival from local farms</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">200+ items</span>
+                        <button class="bg-white text-green-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition">Browse</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-400 to-blue-600 text-white p-6 rounded-2xl card-hover">
+                    <div class="text-5xl mb-4">🥛</div>
+                    <h3 class="text-xl font-bold mb-2">Dairy Products</h3>
+                    <p class="opacity-90 mb-4">Fresh milk, curd, butter & cheese</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">50+ items</span>
+                        <button class="bg-white text-blue-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition">Browse</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-yellow-400 to-yellow-600 text-white p-6 rounded-2xl card-hover">
+                    <div class="text-5xl mb-4">🌾</div>
+                    <h3 class="text-xl font-bold mb-2">Grains & Pulses</h3>
+                    <p class="opacity-90 mb-4">Premium quality rice, wheat & lentils</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">80+ items</span>
+                        <button class="bg-white text-yellow-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition">Browse</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-400 to-purple-600 text-white p-6 rounded-2xl card-hover">
+                    <div class="text-5xl mb-4">🧴</div>
+                    <h3 class="text-xl font-bold mb-2">Personal Care</h3>
+                    <p class="opacity-90 mb-4">Soaps, shampoos & daily essentials</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">100+ items</span>
+                        <button class="bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition">Browse</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-red-400 to-red-600 text-white p-6 rounded-2xl card-hover">
+                    <div class="text-5xl mb-4">🍪</div>
+                    <h3 class="text-xl font-bold mb-2">Snacks & Beverages</h3>
+                    <p class="opacity-90 mb-4">Biscuits, namkeen & cold drinks</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">150+ items</span>
+                        <button class="bg-white text-red-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition">Browse</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-400 to-orange-600 text-white p-6 rounded-2xl card-hover">
+                    <div class="text-5xl mb-4">🏠</div>
+                    <h3 class="text-xl font-bold mb-2">Household Items</h3>
+                    <p class="opacity-90 mb-4">Cleaning supplies & kitchenware</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">70+ items</span>
+                        <button class="bg-white text-orange-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition">Browse</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-pink-400 to-pink-600 text-white p-6 rounded-2xl card-hover">
+                    <div class="text-5xl mb-4">🍯</div>
+                    <h3 class="text-xl font-bold mb-2">Organic Products</h3>
+                    <p class="opacity-90 mb-4">Chemical-free organic groceries</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">60+ items</span>
+                        <button class="bg-white text-pink-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition">Browse</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-indigo-400 to-indigo-600 text-white p-6 rounded-2xl card-hover">
+                    <div class="text-5xl mb-4">❄️</div>
+                    <h3 class="text-xl font-bold mb-2">Frozen Foods</h3>
+                    <p class="opacity-90 mb-4">Ice cream, frozen vegetables</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">40+ items</span>
+                        <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition">Browse</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="text-green-600 font-bold mb-2">GALLERY</div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Fresh & Clean Store</h2>
+                <p class="text-xl text-gray-600">Take a virtual tour of our modern kirana store</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-green-200 to-green-400 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-green-800">
+                        <i class="fas fa-store text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Store Front</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-200 to-yellow-400 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-yellow-800">
+                        <i class="fas fa-carrot text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Fresh Vegetables</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-blue-200 to-blue-400 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-blue-800">
+                        <i class="fas fa-cookie-bite text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Snacks Section</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-200 to-purple-400 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-purple-800">
+                        <i class="fas fa-shopping-cart text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Shopping Area</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-red-200 to-red-400 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-red-800">
+                        <i class="fas fa-truck text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Delivery Fleet</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-orange-200 to-orange-400 rounded-2xl h-64 flex items-center justify-center card-hover">
+                    <div class="text-center text-orange-800">
+                        <i class="fas fa-users text-6xl mb-3"></i>
+                        <p class="font-bold text-lg">Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Areas Section -->
+    <section class="py-20 bg-green-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Delivery Areas</h2>
+                <p class="text-xl text-gray-600">We deliver across Bhopal within 30 minutes</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-3xl shadow-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Coverage Areas</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-green-600"></i>
+                            <span class="font-medium">MP Nagar</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-green-600"></i>
+                            <span class="font-medium">Arera Colony</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-green-600"></i>
+                            <span class="font-medium">New Market</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-green-600"></i>
+                            <span class="font-medium">Bittan Market</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-green-600"></i>
+                            <span class="font-medium">TT Nagar</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-green-600"></i>
+                            <span class="font-medium">Shahpura</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-green-600"></i>
+                            <span class="font-medium">Kolar Road</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-green-600"></i>
+                            <span class="font-medium">Berasia Road</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-yellow-50 rounded-lg">
+                        <h4 class="font-bold text-yellow-800 mb-2">Delivery Charges</h4>
+                        <p class="text-yellow-700">FREE delivery on orders above ₹299</p>
+                        <p class="text-yellow-700">₹25 delivery charge for orders below ₹299</p>
+                    </div>
+                </div>
+                <div class="bg-green-200 rounded-3xl overflow-hidden">
+                    <div class="h-full min-h-96 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-map text-8xl text-green-600 mb-6"></i>
+                            <p class="text-green-800 text-xl font-bold mb-2">Interactive Delivery Map</p>
+                            <p class="text-green-700">Real-time delivery tracking</p>
+                            <button class="mt-4 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+                                <i class="fas fa-location-arrow mr-2"></i>Check Your Area
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Contact & Ordering</h2>
+                <p class="text-xl text-gray-600">Multiple ways to connect with us for your grocery needs</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-3xl shadow-xl">
+                    <h3 class="text-2xl font-bold mb-6">Quick Order Form</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-green-500 transition">
+                            <input type="tel" placeholder="Phone Number" class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-green-500 transition">
+                        </div>
+                        <input type="text" placeholder="Delivery Address" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-green-500 transition">
+                        <select class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-green-500 transition">
+                            <option>Select Area</option>
+                            <option>MP Nagar</option>
+                            <option>Arera Colony</option>
+                            <option>New Market</option>
+                            <option>TT Nagar</option>
+                            <option>Shahpura</option>
+                        </select>
+                        <textarea placeholder="Your grocery list (or specific requirements)" rows="4" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-green-500 transition"></textarea>
+                        <button type="submit" class="w-full hero-gradient text-white p-4 rounded-xl font-bold text-lg hover:scale-105 transition transform">
+                            <i class="fas fa-shopping-bag mr-2"></i>Submit Order
+                        </button>
+                    </form>
+                </div>
+                <div class="space-y-6">
+                    <div class="hero-gradient p-8 rounded-3xl text-white">
+                        <h4 class="text-2xl font-bold mb-4">📞 Phone Orders</h4>
+                        <p class="mb-6 opacity-90">Call us directly for instant grocery ordering and personalized assistance</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-phone text-xl"></i>
+                                <span class="text-xl font-bold">+91 9876543210</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-clock text-xl"></i>
+                                <span>24/7 Order Hotline</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-100 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl mb-3 text-green-800">WhatsApp Orders</h4>
+                        <p class="text-green-700 mb-4">Send your grocery list via WhatsApp for quick ordering!</p>
+                        <button class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+                            <i class="fab fa-whatsapp mr-2"></i>+91 9876543211
+                        </button>
+                    </div>
+                    
+                    <div class="bg-yellow-100 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl mb-3 text-yellow-800">Store Location</h4>
+                        <p class="text-yellow-700 mb-3">Visit our physical store for fresh grocery shopping experience</p>
+                        <div class="space-y-2 text-yellow-700">
+                            <p><i class="fas fa-map-marker-alt mr-2"></i>45 New Market Road, Bhopal, MP</p>
+                            <p><i class="fas fa-clock mr-2"></i>Open: 7:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-100 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl mb-3 text-blue-800">Mobile App</h4>
+                        <p class="text-blue-700 mb-4">Download our app for exclusive discounts and faster ordering</p>
+                        <div class="flex space-x-4">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                <i class="fab fa-google-play mr-1"></i>Play Store
+                            </button>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                <i class="fab fa-app-store mr-1"></i>App Store
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="hero-gradient w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-shopping-basket text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">FreshMart Kirana</h3>
+                            <p class="text-gray-400 text-sm">Fresh Groceries Daily</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Your trusted neighborhood kirana store, now online. Fresh groceries delivered with love and care since 2008.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#home" class="hover:text-green-400 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-green-400 transition">About Us</a></li>
+                        <li><a href="#products" class="hover:text-green-400 transition">Products</a></li>
+                        <li><a href="#gallery" class="hover:text-green-400 transition">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Categories</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-green-400 transition">Vegetables & Fruits</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Dairy Products</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Grains & Pulses</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Snacks & Beverages</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Personal Care</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Household Items</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+                    <div class="space-y-4 text-gray-400">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-green-400"></i>
+                            <span>45 New Market Road, Bhopal, MP</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-green-400"></i>
+                            <span>+91 9876543210</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-green-400"></i>
+                            <span>orders@freshmartkirana.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-green-400"></i>
+                            <span>7 AM - 11 PM Daily</span>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h5 class="font-bold mb-3">Daily Deals Newsletter</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="flex-1 p-2 rounded-l-lg text-gray-800 focus:outline-none">
+                            <button class="hero-gradient px-4 py-2 rounded-r-lg hover:opacity-90 transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400">&copy; 2025 FreshMart Kirana. All rights reserved. | Licensed Grocery Store</p>
+                    <div class="flex space-x-6 text-gray-400">
+                        <a href="#" class="hover:text-green-400 transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-green-400 transition">Terms of Service</a>
+                        <a href="#" class="hover:text-green-400 transition">Return Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Cart Button -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <button class="hero-gradient w-16 h-16 rounded-full shadow-2xl hover:scale-110 transition transform flex items-center justify-center text-white">
+            <i class="fas fa-shopping-cart text-xl"></i>
+            <span class="absolute -top-2 -right-2 bg-yellow-500 text-green-800 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center">3</span>
+        </button>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.md\\:hidden');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-full');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('shadow-lg');
+            nav.classList.toggle('p-4');
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = e.target.querySelector('input[placeholder="Your Name"]').value;
+            if (name) {
+                alert(`Thank you ${name}! Your grocery order has been received. We'll call you within 5 minutes to confirm details.`);
+            } else {
+                alert('Please fill in your name to place the order.');
+            }
+        });
+
+        // Newsletter subscription
+        document.querySelector('input[placeholder="Your email"]').parentNode.querySelector('button').addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = document.querySelector('input[placeholder="Your email"]').value;
+            if (email) {
+                alert('Thank you for subscribing! You\'ll receive daily deals and fresh produce updates.');
+                document.querySelector('input[placeholder="Your email"]').value = '';
+            }
+        });
+
+        // Product category buttons
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.textContent === 'Browse') {
+                btn.addEventListener('click', () => {
+                    const category = btn.closest('.card-hover').querySelector('h3').textContent;
+                    alert(`Browsing ${category}. This would open the product catalog for this category.`);
+                });
+            }
+        });
+
+        // Floating cart button
+        document.querySelector('.fixed button').addEventListener('click', () => {
+            alert('Cart: 3 items\n1. Tomatoes (1kg) - ₹40\n2. Milk (1L) - ₹60\n3. Bread (1 pack) - ₹25\n\nTotal: ₹125\n\n[Proceed to Checkout would open here]');
+        });
+
+        // Quick order buttons
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.textContent.includes('Shop Now') || btn.textContent.includes('Start Shopping')) {
+                btn.addEventListener('click', () => {
+                    alert('Redirecting to our full product catalog where you can browse and add items to cart...');
+                });
+            }
+            if (btn.textContent.includes('Call to Order')) {
+                btn.addEventListener('click', () => {
+                    alert('Calling +91 9876543210...\n\nOur staff will help you place your grocery order over the phone.');
+                });
+            }
+        });
+
+        // WhatsApp and download buttons
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.textContent.includes('WhatsApp')) {
+                btn.addEventListener('click', () => {
+                    alert('Opening WhatsApp chat with FreshMart Kirana...\n\nSend your grocery list and we\'ll prepare your order!');
+                });
+            }
+            if (btn.textContent.includes('Play Store') || btn.textContent.includes('App Store')) {
+                btn.addEventListener('click', () => {
+                    alert('Redirecting to app download page...\n\nOur mobile app offers exclusive discounts and faster ordering!');
+                });
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-opacity-95');
+                header.classList.add('backdrop-blur');
+            } else {
+                header.classList.remove('bg-opacity-95');
+                header.classList.remove('backdrop-blur');
+            }
+        });
+
+        // Add some interactive animations
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('i');
+                if (icon) {
+                    icon.style.transform = 'scale(1.1) rotate(5deg)';
+                    icon.style.transition = 'transform 0.3s ease';
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('i');
+                if (icon) {
+                    icon.style.transform = 'scale(1) rotate(0deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

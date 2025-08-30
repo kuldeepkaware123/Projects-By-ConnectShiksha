@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice & Sizzle - Fine Dining Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #ef4444 0%, #f59e0b 50%, #10b981 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+    </style>
+    <meta name="description" content="Spice & Sizzle Restaurant: Signature dishes, menu, chef story, gallery, reservations, location and contact.">
+    <script>tailwind.config={theme:{extend:{minHeight:{screen:'100vh'}}}}</script>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="hero-gradient w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-utensils text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">Spice & Sizzle</h1>
+                        <p class="text-xs text-gray-600">Fine Dining Restaurant</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-red-600 transition font-medium">Home</a>
+                    <a href="#menu" class="text-gray-700 hover:text-red-600 transition font-medium">Menu</a>
+                    <a href="#about" class="text-gray-700 hover:text-red-600 transition font-medium">About</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-red-600 transition font-medium">Gallery</a>
+                    <a href="#reservations" class="text-gray-700 hover:text-red-600 transition font-medium">Reservations</a>
+                    <a href="#contact" class="text-gray-700 hover:text-red-600 transition font-medium">Contact</a>
+                </nav>
+                <button class="hidden md:block bg-red-600 text-white px-6 py-2 rounded-full font-bold hover:bg-red-700 transition">Book Table</button>
+                <button class="md:hidden text-gray-700"><i class="fas fa-bars text-xl"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero-gradient text-white pt-20 min-h-screen flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-yellow-200 font-semibold">Signature Dining Experience</span>
+                    </div>
+                    <h2 class="text-5xl lg:text-7xl font-black leading-tight mb-6">Taste The <span class="text-yellow-300">Extraordinary</span></h2>
+                    <p class="text-xl opacity-90 mb-8">From farm-fresh ingredients to masterfully crafted dishes, enjoy cuisine that celebrates flavors.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-gray-900 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition"><i class="fas fa-book-open mr-2"></i>View Menu</button>
+                        <button class="border-2 border-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-gray-900 transition"><i class="fas fa-chair mr-2"></i>Reserve Table</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white/10 backdrop-blur rounded-3xl p-8">
+                        <h3 class="text-3xl font-bold mb-6 text-center">Today's Specials</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center bg-white/20 p-4 rounded-xl"><span>Smoked Paneer Tikka</span><span class="text-yellow-300 font-bold">₹399</span></div>
+                            <div class="flex justify-between items-center bg-white/20 p-4 rounded-xl"><span>Butter Garlic Prawns</span><span class="text-yellow-300 font-bold">₹549</span></div>
+                            <div class="flex justify-between items-center bg-white/20 p-4 rounded-xl"><span>Truffle Mushroom Risotto</span><span class="text-yellow-300 font-bold">₹499</span></div>
+                        </div>
+                        <button class="w-full mt-6 bg-yellow-400 text-gray-900 py-3 rounded-xl font-bold hover:bg-yellow-300 transition">Order Special</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14">
+                <div class="text-red-600 font-semibold mb-2">OUR MENU</div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Delicious Selections</h2>
+                <p class="text-lg text-gray-600">Handpicked favorites by our head chef</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow card-hover">
+                    <div class="bg-gradient-to-br from-red-200 to-red-400 h-48 flex items-center justify-center">
+                        <i class="fas fa-pepper-hot text-6xl text-red-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Peri-Peri Chicken</h3>
+                        <p class="text-gray-600 mb-4">Served with herbed rice and salad</p>
+                        <div class="flex justify-between items-center"><span class="text-2xl font-bold text-red-600">₹549</span><button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition"><i class="fas fa-plus mr-1"></i>Add</button></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow card-hover">
+                    <div class="bg-gradient-to-br from-yellow-200 to-yellow-400 h-48 flex items-center justify-center">
+                        <i class="fas fa-pizza-slice text-6xl text-yellow-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Four Cheese Pizza</h3>
+                        <p class="text-gray-600 mb-4">Stone-baked with fresh basil</p>
+                        <div class="flex justify-between items-center"><span class="text-2xl font-bold text-red-600">₹499</span><button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition"><i class="fas fa-plus mr-1"></i>Add</button></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow card-hover">
+                    <div class="bg-gradient-to-br from-emerald-200 to-emerald-400 h-48 flex items-center justify-center">
+                        <i class="fas fa-seedling text-6xl text-emerald-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mediterranean Salad</h3>
+                        <p class="text-gray-600 mb-4">Olives, feta, and vinaigrette</p>
+                        <div class="flex justify-between items-center"><span class="text-2xl font-bold text-red-600">₹349</span><button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition"><i class="fas fa-plus mr-1"></i>Add</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="text-red-600 font-semibold mb-2">ABOUT US</div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Crafting Culinary Stories</h2>
+                    <p class="text-lg text-gray-600 mb-6">Led by Chef Arjun Mehra, our kitchen blends traditional techniques with modern creativity to deliver unforgettable dining experiences.</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-center space-x-3"><div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center"><i class="fas fa-award text-red-600"></i></div><div><h4 class="font-bold text-gray-800">Award-Winning</h4><p class="text-gray-600 text-sm">Best New Restaurant 2024</p></div></div>
+                        <div class="flex items-center space-x-3"><div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center"><i class="fas fa-leaf text-yellow-600"></i></div><div><h4 class="font-bold text-gray-800">Farm Fresh</h4><p class="text-gray-600 text-sm">Seasonal ingredients</p></div></div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-red-200 to-yellow-200 rounded-2xl p-8 h-96 flex items-center justify-center">
+                    <div class="text-center">
+                        <i class="fas fa-user-chef text-8xl text-red-700 mb-4"></i>
+                        <p class="text-red-800 font-medium">Head Chef: Arjun Mehra</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14">
+                <div class="text-red-600 font-semibold mb-2">GALLERY</div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Food & Ambience</h2>
+                <p class="text-lg text-gray-600">A glimpse into our culinary world</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-red-300 to-red-500 rounded-2xl h-64 flex items-center justify-center card-hover text-white"><div class="text-center"><i class="fas fa-bread-slice text-6xl mb-3"></i><p class="font-bold text-lg">Artisan Breads</p></div></div>
+                <div class="bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl h-64 flex items-center justify-center card-hover text-white"><div class="text-center"><i class="fas fa-ice-cream text-6xl mb-3"></i><p class="font-bold text-lg">Desserts</p></div></div>
+                <div class="bg-gradient-to-br from-emerald-300 to-emerald-500 rounded-2xl h-64 flex items-center justify-center card-hover text-white"><div class="text-center"><i class="fas fa-wine-glass text-6xl mb-3"></i><p class="font-bold text-lg">Wine & Drinks</p></div></div>
+                <div class="bg-gradient-to-br from-indigo-300 to-indigo-500 rounded-2xl h-64 flex items-center justify-center card-hover text-white"><div class="text-center"><i class="fas fa-fire text-6xl mb-3"></i><p class="font-bold text-lg">Grill</p></div></div>
+                <div class="bg-gradient-to-br from-pink-300 to-pink-500 rounded-2xl h-64 flex items-center justify-center card-hover text-white"><div class="text-center"><i class="fas fa-seedling text-6xl mb-3"></i><p class="font-bold text-lg">Salads</p></div></div>
+                <div class="bg-gradient-to-br from-blue-300 to-blue-500 rounded-2xl h-64 flex items-center justify-center card-hover text-white"><div class="text-center"><i class="fas fa-chair text-6xl mb-3"></i><p class="font-bold text-lg">Ambience</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations -->
+    <section id="reservations" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Reserve Your Table</h2>
+                <p class="text-lg text-gray-600">Easy online bookings in minutes</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-3xl shadow">
+                    <h3 class="text-2xl font-bold mb-6">Reservation Form</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Full Name" class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-red-500 transition">
+                            <input type="tel" placeholder="Phone Number" class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-red-500 transition">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="date" class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-red-500 transition">
+                            <select class="p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-red-500 transition">
+                                <option>Guests</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5+</option>
+                            </select>
+                        </div>
+                        <textarea rows="4" placeholder="Any special requests?" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-red-500 transition"></textarea>
+                        <button type="submit" class="w-full hero-gradient text-white p-4 rounded-xl font-bold text-lg hover:scale-105 transition transform"><i class="fas fa-chair mr-2"></i>Book Now</button>
+                    </form>
+                </div>
+                <div class="space-y-6">
+                    <div class="hero-gradient p-8 rounded-3xl text-white">
+                        <h4 class="text-2xl font-bold mb-4">🕒 Opening Hours</h4>
+                        <div class="grid grid-cols-2 gap-4 opacity-95">
+                            <p>Mon-Fri: 12 PM - 11 PM</p>
+                            <p>Sat-Sun: 11 AM - 12 AM</p>
+                            <p>Lunch: 12 PM - 3 PM</p>
+                            <p>Dinner: 7 PM - 11 PM</p>
+                        </div>
+                    </div>
+                    <div class="bg-yellow-100 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl mb-3 text-yellow-800">Chef's Table</h4>
+                        <p class="text-yellow-700">Exclusive 7-course tasting menu by reservation only.</p>
+                    </div>
+                    <div class="bg-green-100 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl mb-3 text-green-800">Private Events</h4>
+                        <p class="text-green-700 mb-2">Book our banquet hall for celebrations.</p>
+                        <button class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">Get Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Find Us</h2>
+                <p class="text-lg text-gray-600">Heart of Bhopal, easy access and parking</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-3xl shadow">
+                    <h3 class="text-2xl font-bold mb-6">Contact Details</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <p><i class="fas fa-map-marker-alt text-red-600 mr-2"></i>12 Gourmet Lane, MP Nagar, Bhopal</p>
+                        <p><i class="fas fa-phone text-green-600 mr-2"></i>+91 9876543222</p>
+                        <p><i class="fas fa-envelope text-yellow-600 mr-2"></i>hello@spiceandsizzle.com</p>
+                    </div>
+                </div>
+                <div class="bg-red-100 rounded-3xl overflow-hidden">
+                    <div class="h-full min-h-96 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-map text-8xl text-red-600 mb-6"></i>
+                            <p class="text-red-800 text-xl font-bold mb-2">Google Maps</p>
+                            <p class="text-red-700">Tap to open directions</p>
+                            <button class="mt-4 bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition"><i class="fas fa-directions mr-2"></i>Get Directions</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="hero-gradient w-12 h-12 rounded-full flex items-center justify-center"><i class="fas fa-utensils text-white text-xl"></i></div>
+                        <div>
+                            <h3 class="text-xl font-bold">Spice & Sizzle</h3>
+                            <p class="text-gray-400 text-sm">Fine Dining Restaurant</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">A celebration of spices and fresh ingredients, curated by award-winning chefs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#home" class="hover:text-red-400 transition">Home</a></li>
+                        <li><a href="#menu" class="hover:text-red-400 transition">Menu</a></li>
+                        <li><a href="#about" class="hover:text-red-400 transition">About</a></li>
+                        <li><a href="#gallery" class="hover:text-red-400 transition">Gallery</a></li>
+                        <li><a href="#reservations" class="hover:text-red-400 transition">Reservations</a></li>
+                        <li><a href="#contact" class="hover:text-red-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Menu</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-red-400 transition">Starters</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition">Mains</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition">Desserts</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition">Beverages</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+                    <div class="space-y-4 text-gray-400">
+                        <div class="flex items-center space-x-3"><i class="fas fa-map-marker-alt text-red-400"></i><span>12 Gourmet Lane, Bhopal</span></div>
+                        <div class="flex items-center space-x-3"><i class="fas fa-phone text-green-400"></i><span>+91 9876543222</span></div>
+                        <div class="flex items-center space-x-3"><i class="fas fa-envelope text-yellow-400"></i><span>hello@spiceandsizzle.com</span></div>
+                        <div class="flex items-center space-x-3"><i class="fas fa-clock text-blue-400"></i><span>12 PM - 11 PM</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400">&copy; 2025 Spice & Sizzle. All rights reserved.</p>
+                    <div class="flex space-x-6 text-gray-400">
+                        <a href="#" class="hover:text-red-400 transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-red-400 transition">Terms</a>
+                        <a href="#" class="hover:text-red-400 transition">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <button class="hero-gradient w-16 h-16 rounded-full shadow-2xl hover:scale-110 transition transform flex items-center justify-center text-white"><i class="fas fa-chair text-xl"></i></button>
+    </div>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));t&&t.scrollIntoView({behavior:'smooth'});}));
+        // Mobile nav toggle
+        const mobileBtn=document.querySelector('.md\\:hidden'); const nav=document.querySelector('nav');
+        mobileBtn.addEventListener('click',()=>{nav.classList.toggle('hidden');nav.classList.toggle('flex');nav.classList.toggle('flex-col');nav.classList.toggle('absolute');nav.classList.toggle('top-full');nav.classList.toggle('left-0');nav.classList.toggle('w-full');nav.classList.toggle('bg-white');nav.classList.toggle('shadow-lg');nav.classList.toggle('p-4');});
+        // Reservation form
+        document.querySelector('form').addEventListener('submit',e=>{e.preventDefault();const name=e.target.querySelector('input[placeholder="Full Name"]').value; alert(name?`Thank you ${name}! Your table is reserved. See you soon!`:'Please enter your name to continue.');});
+        // Specials and menu add buttons
+        document.querySelectorAll('.fa-plus').forEach(i=>{i.parentNode.addEventListener('click',()=>{const item=i.closest('.card-hover').querySelector('h3').textContent; alert(`${item} added to order.`);});});
+        // CTA buttons
+        document.querySelectorAll('button').forEach(btn=>{
+            if(btn.textContent.includes('View Menu')) btn.addEventListener('click',()=>alert('Opening full menu...'));
+            if(btn.textContent.includes('Reserve Table')||btn.textContent.includes('Book Table')) btn.addEventListener('click',()=>alert('Opening reservation form...'));
+            if(btn.textContent.includes('Get Quote')) btn.addEventListener('click',()=>alert('We will contact you with event details.'));
+        });
+        // Floating button
+        document.querySelector('.fixed button').addEventListener('click',()=>alert('Quick reservation: Call +91 9876543222'));
+        // Header scroll effect
+        window.addEventListener('scroll',()=>{const h=document.querySelector('header'); if(window.scrollY>100){h.classList.add('bg-opacity-95','backdrop-blur');} else {h.classList.remove('bg-opacity-95','backdrop-blur');}});
+    </script>
+</body>
+</html>
+
+
